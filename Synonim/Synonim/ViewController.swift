@@ -14,10 +14,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewPlace: UIView!
     
     var words : [String] = []
+    var secondSyn: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let synDefault = UserDefaults.standard
+        if synDefault.value(forKey: "syn") != nil {
+            secondSyn = synDefault.value(forKey: "syn") as! String
+            self.searchSynonyms(text: secondSyn)
+            searchBar.text = ""
+            synDefault.removeObject(forKey: "syn")
+        }
         
         self.searchBar.delegate = self
     }

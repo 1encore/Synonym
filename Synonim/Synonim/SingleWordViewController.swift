@@ -21,6 +21,13 @@ class SingleWordViewController: UIViewController {
         synonymLabel.text = word
     }
 
+    
+    @IBAction func asMain(_ sender: UIButton) {
+        let synDefault = UserDefaults.standard
+        synDefault.set(word, forKey: "syn")
+        synDefault.synchronize()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

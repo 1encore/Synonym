@@ -87,14 +87,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQE-ZI-ETF">
+                                <rect key="frame" x="128" y="433" width="116" height="30"/>
+                                <state key="normal" title="set as main word"/>
+                                <connections>
+                                    <action selector="asMain:" destination="M9X-dv-Nff" eventType="touchUpInside" id="q8f-Tm-7sL"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="4fV-nk-2rG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nQE-ZI-ETF" firstAttribute="leading" secondItem="Z18-Cq-M0u" secondAttribute="leadingMargin" constant="112" id="6yY-66-DH0"/>
                             <constraint firstItem="tRA-Wk-gRF" firstAttribute="leading" secondItem="Z18-Cq-M0u" secondAttribute="leadingMargin" constant="83" id="7TI-e8-H9H"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2hb-Qx-PYY" secondAttribute="trailing" constant="128" id="EyS-HH-uU6"/>
                             <constraint firstItem="2hb-Qx-PYY" firstAttribute="top" secondItem="ITW-vk-neQ" secondAttribute="bottom" constant="486" id="NDm-ug-2sO"/>
                             <constraint firstItem="LTf-Xy-iFX" firstAttribute="top" secondItem="tRA-Wk-gRF" secondAttribute="bottom" constant="296" id="T1e-ib-faU"/>
+                            <constraint firstItem="LTf-Xy-iFX" firstAttribute="top" secondItem="nQE-ZI-ETF" secondAttribute="bottom" constant="204" id="WGj-Ur-Jxv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tRA-Wk-gRF" secondAttribute="trailing" constant="83" id="cOr-S8-beF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nQE-ZI-ETF" secondAttribute="trailing" constant="115" id="dYV-7h-ZSj"/>
                             <constraint firstItem="2hb-Qx-PYY" firstAttribute="leading" secondItem="Z18-Cq-M0u" secondAttribute="leadingMargin" constant="128" id="uN3-hZ-3W0"/>
                         </constraints>
                     </view>
@@ -107,4 +118,7 @@
             <point key="canvasLocation" x="788" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hI2-Ke-cuD"/>
+    </inferredMetricsTieBreakers>
 </document>
